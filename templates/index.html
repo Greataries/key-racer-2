@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Balloon Game - Main Menu</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/music.css">
+</head>
+
+<body>
+    <a class="button" href="#" style="--color:#1e9bff;" onclick="login()">
+        <span></span>
+        <span></span>
+        <span></span> <!--Copied from freefrontend.com-->
+        <span></span>
+        LOGIN 
+    </a>
+    <div class="game-area">
+        <div id="game-container" class="menu-container">
+            <div class="brand">
+                <div class="logo">
+                    <svg width="200px" height="200px">
+                        <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z" />
+
+                        <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z" />
+
+                        <path stroke="#ff004e" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-options">
+                <button onclick="window.location.href='/templates/game.html'">NEW GAME</button> <!--Copied from freefrontend.com-->
+                <button onclick="openAbout()">ABOUT</button>
+            </div>
+        </div>
+    </div>
+    <!-- Small Music Button -->
+    <div class="music-button" onclick="togglePlayer()">
+        <i class="fa fa-music fa-2x"></i>
+    </div>
+
+    <!-- Music Player Bar -->
+    <div class="player" id="music-player">
+        <div class="back-button" onclick="togglePlayer()">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        <div class="details">
+            <div class="now-playing">PLAYING x OF y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+        </div>
+        <div class="buttons">
+            <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+            <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+            <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+        </div>
+        <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+
+    <script src="/static/js/music.js"></script>
+    <script>
+        function openAbout() {
+            alert('About Page (To be implemented)');
+        }
+        function login() {
+            alert('Yet to implement. Will do after creating database');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <style>
+        body {
+            background-image: url("/static/images/gif_file.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transform: scale(1.6);
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-group label {
+            font-size: xx-large;
+            margin-right: 10px;
+        }
+        .form-group select {
+            font-size: x-large;
+            padding: 5px;
+        }
+        button {
+            font-size: medium;
+            padding: 10px 10px;
+            background-color: rgb(13, 164, 224);
+            color: white;
+            border: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="form-group">
+            <label for="level">Choose level:</label>
+            <select name="level" id="level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="duration">Choose duration:</label>
+            <select name="duration" id="duration">
+                <option value="2min">2 minutes</option>
+                <option value="5min">5 minutes</option>
+                <option value="7min">7 minutes</option>
+            </select>
+        </div>
+        <button type="button" onclick="window.location.href='/templates/game.html'">Start playing</button>
+    </div>
+</body>
+</html>
+
